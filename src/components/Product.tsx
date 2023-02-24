@@ -18,7 +18,11 @@ export const Product = ({
   const onAddToCart = () =>
     dispatch({ type: REDUCER_ACTIONS.ADD, payload: { ...product, quantity: 1 } });
 
-  const itemInCart = inCart ? ' -> Item in Cart' : null;
+  const onRemoveFromCart = () =>
+    dispatch({
+      type: REDUCER_ACTIONS.REMOVE,
+      payload: { ...product, quantity: 1 },
+    });
 
   const content = (
     <article className="flex flex-col items-center">
@@ -29,9 +33,12 @@ export const Product = ({
           {new Intl.NumberFormat('en-Us', { style: 'currency', currency: 'USD' }).format(
             product.price,
           )}
-          {itemInCart}
         </p>
-        {inCart ? null : <button onClick={onAddToCart}>add to Cart</button>}
+        {inCart ? (
+          <button onClick={onRemoveFromCart}>remove from Cart</button>
+        ) : (
+          <button onClick={onAddToCart}>add to Cart</button>
+        )}
       </div>
     </article>
   );

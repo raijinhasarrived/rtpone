@@ -12,7 +12,7 @@ export const Header = ({ viewCart, setViewCart }: PropsType) => {
   const content = (
     <header className="flex text-xl w-full justify-between">
       <h1 className="uppercase text-2xl w-full">Context</h1>
-      <div className="flex flex-col w-[170px]">
+      <div className="flex flex-col w-[200px]">
         <Nav viewCart={viewCart} setViewCart={setViewCart} />
         <div>
           <p>Total Items:{totalItems}</p>
