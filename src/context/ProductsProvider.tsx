@@ -1,14 +1,14 @@
 import { createContext, ReactElement, useState } from 'react';
 
-import techscape from '../assets/techscape.png';
-import neonchrono from '../assets/neonchrono.png';
-import synthwave from '../assets/sunthwave.png';
-import ctime from '../assets/ctime.png';
-import digipunk from '../assets/digipunk.png';
-import holohawk from '../assets/holohawk.png';
-import cybercuf from '../assets/cybercuf.png';
-import futureflash from '../assets/futureflash.png';
-import glitchgear from '../assets/glitchgear.png';
+import techscape from '../assets/techscape.webp';
+import neonchrono from '../assets/neonchrono.webp';
+import synthwave from '../assets/sunthwave.webp';
+import ctime from '../assets/ctime.webp';
+import digipunk from '../assets/digipunk.webp';
+import holohawk from '../assets/holohawk.webp';
+import cybercuf from '../assets/cybercuf.webp';
+import futureflash from '../assets/futureflash.webp';
+import glitchgear from '../assets/glitchgear.webp';
 
 export type ProductType = {
   sku: string;
