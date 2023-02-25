@@ -13,12 +13,17 @@ export const Cart = () => {
   const pageContent = confirm ? (
     <h2>Thank you for your order.</h2>
   ) : (
-    <div className="flex flex-col items-center">
-      <h2 className="text-2xl">Cart</h2>
-      <button disabled={!totalItems} onClick={onSubmitOrder}>
+    <div className="flex flex-col items-center gap-3">
+      <h2 className="text-3xl">Cart</h2>
+      <button
+        disabled={!totalItems}
+        className={`${
+          !totalItems ? 'hidden' : null
+        } text-2xl border rounded-md px-2 hover:bg-teal-500 transition-all duration-150`}
+        onClick={onSubmitOrder}>
         Place Order
       </button>
-      <ul className="flex flex-col sm:flex-row gap-5 justify-center">
+      <ul className="grid grid-cols-1 sm:grid-cols-3 gap-5">
         {cart.map((item) => {
           return (
             <CartLineItem

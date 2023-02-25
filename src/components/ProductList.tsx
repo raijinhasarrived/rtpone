@@ -27,7 +27,9 @@ export const ProductList = () => {
   }
 
   const content = (
-    <main className="flex gap-5 justify-center flex-col sm:flex-row">{pageContent}</main>
+    <main className="flex items-center justify-center ">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">{pageContent}</div>
+    </main>
   );
 
   return content;
