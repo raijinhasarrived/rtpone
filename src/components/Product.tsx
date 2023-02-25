@@ -25,7 +25,7 @@ export const Product = ({
     });
 
   const content = (
-    <article className="flex flex-col items-center">
+    <article className="flex flex-col items-center hover:text-teal-400">
       <h3 className="text-3xl tracking-wide">{product.name}</h3>
       <img className="w-52 h-52 rounded-md" src={product.img} alt={product.name} />
       <div className="flex gap-2">
